@@ -10,6 +10,11 @@
   min-height: 1px;
 }
 
+.container {
+  padding-left: 330px;
+  padding-right: 330px;
+}
+
 .header-bottom {
   position: absolute;
   top: calc(100% - 1px);

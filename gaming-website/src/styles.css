@@ -208,7 +208,7 @@ body {
 .has-scrollbar {
   display: flex;
   gap: 30px;
-  overflow-x: auto;
+  overflow-y: scroll;
   padding-block-end: 30px;
   scroll-snap-type: inline mandatory;
 }

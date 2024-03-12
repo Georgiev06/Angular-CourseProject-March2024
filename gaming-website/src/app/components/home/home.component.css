@@ -1,0 +1,77 @@
+.hero-banner {
+  display: none;
+}
+
+.container {
+    margin: auto;
+}
+
+.hero {
+  --section-padding: 60px;
+  margin-block-start: 84px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.hero-subtitle {
+  color: var(--marigold);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+}
+
+.hero-title {
+  margin-block: 15px 12px;
+}
+
+.hero-text {
+  color: var(--light-gray-2);
+  margin-block-end: 45px;
+}
+
+.hero-text {
+  max-width: 64ch;
+  margin-inline: auto;
+}
+
+.btn.skewBg {
+    margin-left: 0px;
+}
+
+.hero {
+  text-align: left;
+}
+
+.hero-banner {
+  display: block;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero .container {
+  grid-template-columns: 1fr 1fr;
+}
+
+.container,
+:is(.header, .hero, .live-match) .container {
+  max-width: 1230px;
+}
+
+.h1 {
+  --fs-2: 7.5rem;
+}
+
+.scrollbar-item {
+  min-width: calc(25% - 22.5px);
+}
+

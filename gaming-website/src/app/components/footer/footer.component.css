@@ -2,10 +2,6 @@
   color: var(--roman-silver);
 }
 
-.footer .logo {
-  margin-block-end: 35px;
-}
-
 .footer-text,
 .footer .contact-item {
   font-size: var(--fs-8);
@@ -80,29 +76,6 @@
   border-radius: 2px;
 }
 
-.footer-newsletter {
-  position: relative;
-}
-
-.footer-newsletter .email-field {
-  background-color: var(--raisin-black-4);
-  padding: 12px 20px;
-  padding-inline-end: 60px;
-  font-size: var(--fs-9);
-  color: var(--white);
-}
-
-.footer-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 53px;
-  background-color: var(--marigold);
-  color: var(--xiketic);
-  display: grid;
-  place-content: center;
-}
 
 .footer-bottom-img {
   display: none;
