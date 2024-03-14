@@ -7,13 +7,21 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { GamesComponent } from './components/games/games.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent,
+    GamesComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
