@@ -1,44 +1,9 @@
-<section id="register-page" class="content auth">
-  <form id="register">
-    <div class="container">
-      <h2 class="h2 section-title">
-        Register
-      </h2>
-
-      <label>Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="username@email.com"
-      />
-
-      <label>Password:</label>
-      <input type="password" name="password" id="register-password" />
-
-      <label>Confirm Password:</label>
-      <input type="password" name="confirm-password" id="confirm-password" />
-
-      <input class="btn submit" type="submit" value="Register" />
-
-      <p class="field">
-        <a>If you already have profile click <span routerLink="/login">here</span></a>
-      </p>
-    </div>
-  </form>
-</section>
-
-<!-- <section class="register" aria-label="register-page">
+<section class="newsletter" aria-label="newsletter">
   <div class="container">
-    <div class="register-card">
-      <h2 class="h2">
-        Our <span class="span">Register</span>
-      </h2> -->
-      <!-- <h2 class="h2 section-title">Register</h2>
-
-      <form action="" class="register-form">
+    <div class="newsletter-card">
+      <h2 class="h2 section-title">Register</h2>
+      <form action="" class="newsletter-form">
         <div class="input-wrapper skewBg">
-          <label>Email:</label>
           <input
             type="email"
             name="email_address"
@@ -48,31 +13,48 @@
             class="email-field"
           />
 
-          <label>Password:</label>
-          <input type="password" name="password" id="register-password" />
-
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            name="confirm_password"
-            id="confirm-password"
-          />
-
-          <input class="btn submit" type="submit" value="Register" />
-
           <ion-icon name="mail-outline"></ion-icon>
         </div>
 
-        <p class="field">
-          <a>If you already have profile click <span routerLink="/login">here</span></a>
+        <div class="input-wrapper skewBg">
+          <input
+            type="password"
+            name="password"
+            aria-label="password"
+            placeholder="Enter your password..."
+            required
+            class="password-field"
+          />
+
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </div>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="password"
+            name="password"
+            aria-label="password"
+            placeholder="Enter your password again..."
+            required
+            class="password-field"
+          />
+
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </div>
+
+        <p>
+          <a class="field"
+            ><ion-icon name="alert-outline"></ion-icon> If you already have profile click
+            <span routerLink="/login" class="link">here</span></a
+          >
         </p>
 
-        <button type="submit" class="btn register-btn skewBg">
+        <button type="submit" class="btn newsletter-btn skewBg">
           <span class="span">Register</span>
 
-          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          <ion-icon name="log-in-outline"></ion-icon>
         </button>
       </form>
     </div>
   </div>
-</section> -->
+</section>
