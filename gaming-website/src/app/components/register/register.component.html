@@ -1,3 +1,78 @@
-<p>
-  register works!
-</p>
+<section id="register-page" class="content auth">
+  <form id="register">
+    <div class="container">
+      <h2 class="h2 section-title">
+        Register
+      </h2>
+
+      <label>Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="username@email.com"
+      />
+
+      <label>Password:</label>
+      <input type="password" name="password" id="register-password" />
+
+      <label>Confirm Password:</label>
+      <input type="password" name="confirm-password" id="confirm-password" />
+
+      <input class="btn submit" type="submit" value="Register" />
+
+      <p class="field">
+        <a>If you already have profile click <span routerLink="/login">here</span></a>
+      </p>
+    </div>
+  </form>
+</section>
+
+<!-- <section class="register" aria-label="register-page">
+  <div class="container">
+    <div class="register-card">
+      <h2 class="h2">
+        Our <span class="span">Register</span>
+      </h2> -->
+      <!-- <h2 class="h2 section-title">Register</h2>
+
+      <form action="" class="register-form">
+        <div class="input-wrapper skewBg">
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email_address"
+            aria-label="email"
+            placeholder="Enter your email..."
+            required
+            class="email-field"
+          />
+
+          <label>Password:</label>
+          <input type="password" name="password" id="register-password" />
+
+          <label>Confirm Password:</label>
+          <input
+            type="password"
+            name="confirm_password"
+            id="confirm-password"
+          />
+
+          <input class="btn submit" type="submit" value="Register" />
+
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+
+        <p class="field">
+          <a>If you already have profile click <span routerLink="/login">here</span></a>
+        </p>
+
+        <button type="submit" class="btn register-btn skewBg">
+          <span class="span">Register</span>
+
+          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+</section> -->
