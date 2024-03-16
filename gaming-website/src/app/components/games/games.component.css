@@ -3,14 +3,13 @@
   background-color: var(--white);
 }
 
-.section-wrapper::before {
+/* .section-wrapper::before {
   content: "";
   position: absolute;
-  background-image: url("../../../assets/images/section-wrapper-bg.png");
   background-repeat: no-repeat;
   background-size:auto;
-  background-position: center;
-}
+  background-position:  center;
+} */
 
 .latest-game .section-title {
   margin-block-end: 80px;
@@ -20,7 +19,7 @@
   margin-inline: -8px;
   padding-inline: 80vh;
   scroll-padding-inline-start: 36vh;
-  margin-bottom: 25px;
+  margin-bottom: 87px;
 }
 
 .latest-game-card {
