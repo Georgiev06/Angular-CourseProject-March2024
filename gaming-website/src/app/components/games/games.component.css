@@ -1,0 +1,70 @@
+.section-wrapper {
+  position: relative;
+  background-color: var(--white);
+}
+
+.section-wrapper::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../assets/images/section-wrapper-bg.png");
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position: center;
+}
+
+.latest-game .section-title {
+  margin-block-end: 80px;
+}
+
+.latest-game .has-scrollbar {
+  margin-inline: -8px;
+  padding-inline: 80vh;
+  scroll-padding-inline-start: 36vh;
+  margin-bottom: 25px;
+}
+
+.latest-game-card {
+  position: relative;
+  box-shadow: var(--shadow-2);
+}
+
+.latest-game-card .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--xiketic_90);
+  padding: 35px 25px;
+}
+
+.latest-game-card .card-badge {
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+}
+
+.latest-game-card .card-title {
+  margin-block-end: 12px;
+  color: aliceblue;
+  transition: var(--transition);
+}
+
+.latest-game-card .card-title:is(:hover, :focus) {
+  color: var(--marigold);
+}
+
+.latest-game-card .card-price {
+  color: var(--silver);
+  font-size: var(--fs-10);
+  font-weight: var(--fw-600);
+}
+
+.latest-game-card .card-price .span {
+  margin-inline-start: 5px;
+}
+
+.latest-game .has-scrollbar { padding-block-end: 0; }
+
+.latest-game .has-scrollbar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}

@@ -3,7 +3,7 @@
 }
 
 .container {
-    margin: auto;
+  margin: auto;
 }
 
 .hero {
@@ -40,7 +40,8 @@
 }
 
 .btn.skewBg {
-    margin-left: 0px;
+  margin-left: 0px;
+  font-family: var(--ff-oxanium);
 }
 
 .hero {
@@ -74,4 +75,3 @@
 .scrollbar-item {
   min-width: calc(25% - 22.5px);
 }
-

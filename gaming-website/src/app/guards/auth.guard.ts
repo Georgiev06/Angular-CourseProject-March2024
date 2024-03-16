@@ -10,5 +10,5 @@ export const authGuard: CanActivateFn = (
   state: RouterStateSnapshot
 ) => {
   //TODO: check if user is logged in 
-  return false;
+  return true;
 };
