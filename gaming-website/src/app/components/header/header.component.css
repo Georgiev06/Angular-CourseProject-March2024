@@ -265,3 +265,11 @@
   font-size: var(--fs-9);
   padding-inline: 25px;
 }
+
+.mini-logo {
+  display: inline-block;
+  gap: 10px;
+  margin-left: 5px;
+  position: relative; /* Add relative positioning */
+  top: 6px; /* Adjust the vertical position as needed */
+}

@@ -1,1 +1,94 @@
+/* about-us.component.css */
 
+.section.about-us {
+  /* background: linear-gradient(to right, #1c1c1c, #333333); */
+  /* background-color: var(--raisin-black-3); */
+  background-image: url(../../../assets/images/shop-bg.jpg);
+  color: #fff;
+  padding: 140px 0;
+}
+
+.mini-title {
+  color: var(--marigold);
+  display: inline;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 70px;
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: var(--ff-oxanium);
+}
+
+.about-description {
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+  line-height: 2.2;
+  font-family: var(--ff-oxanium);
+  width: 100vh;
+  margin-left: 44.5vh;
+}
+
+.about-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: var(--ff-oxanium);
+}
+
+.about-item {
+  width: calc(17% - 27px); /* Adjust the width as needed */
+  padding: 20px; /* Adjust the padding as needed */
+  margin: 20px;
+  border-radius: 20px;
+  background-color: var(--raisin-black-4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.about-item svg {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  fill: var(--marigold); /* Adjust color as needed */
+}
+
+.about-item h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--marigold);
+  font-family: var(--ff-oxanium);
+}
+
+.about-item p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #bcbcbc;
+  font-family: var(--ff-oxanium);
+}
+
+.about-details-text {
+  padding-top: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  line-height: 2;
+  text-align: center;
+  font-family: var(--ff-oxanium);
+}
+
+.about-details-text p {
+  margin-bottom: 5px;
+  font-family: var(--ff-oxanium);
+}

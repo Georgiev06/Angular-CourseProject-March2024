@@ -1,30 +1,39 @@
-.section-wrapper {
-  position: relative;
+.section.latest-game {
   background-color: var(--white);
+  position: relative;
 }
 
-/* .section-wrapper::before {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size:auto;
-  background-position:  center;
-} */
+.latest-game .section-subtitle {
+  font-size: 1.6rem;
+  color: var(--silver);
+}
 
 .latest-game .section-title {
-  margin-block-end: 80px;
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+  color: var(--white);
+  text-transform: uppercase;
 }
 
 .latest-game .has-scrollbar {
   margin-inline: -8px;
   padding-inline: 80vh;
   scroll-padding-inline-start: 36vh;
-  margin-bottom: 87px;
+  margin-bottom: 86px;
+  padding-top: 5vh;
+  overflow-x: auto;
 }
 
 .latest-game-card {
+  padding-top: 10px;
   position: relative;
-  box-shadow: var(--shadow-2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+
+.latest-game-card:hover {
+  transform: translateY(-5px);
 }
 
 .latest-game-card .card-content {
@@ -48,7 +57,7 @@
   transition: var(--transition);
 }
 
-.latest-game-card .card-title:is(:hover, :focus) {
+.latest-game-card .card-title:hover, .latest-game-card .card-title:focus {
   color: var(--marigold);
 }
 
@@ -62,8 +71,9 @@
   margin-inline-start: 5px;
 }
 
-.latest-game .has-scrollbar { padding-block-end: 0; }
-
 .latest-game .has-scrollbar::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+  display: none; /* Hide scrollbar */
 }
+
+
+
