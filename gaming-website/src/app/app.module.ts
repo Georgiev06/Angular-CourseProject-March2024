@@ -11,6 +11,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { GamesComponent } from './components/games/games.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,10 @@ import { RegisterComponent } from './components/register/register.component';
     AboutUsComponent,
     GamesComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    IonicModule.forRoot({})
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, IonicModule.forRoot({})],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
