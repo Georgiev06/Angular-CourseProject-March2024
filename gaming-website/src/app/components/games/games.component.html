@@ -9,14 +9,17 @@
       background-color: aliceblue;
     "
   >
-    <div class="container">
-      <p class="section-subtitle">Latest Releases</p>
-
-      <h2 class="h2 section-title">Games</h2>
-
-      <ul class="has-scrollbar">
-        <li *ngFor="let game of games" class="scrollbar-item">
-          <div class="latest-game-card">
+  <div class="container">
+    <p class="section-subtitle">Latest Releases</p>
+    
+    <h2 class="h2 section-title">Games</h2>
+    
+    <ul class="has-scrollbar">
+      <div *ngIf="isLoading" class="loader">
+        <app-loader/>
+      </div>
+      <li *ngFor="let game of games" class="scrollbar-item">
+          <div *ngIf="!isLoading" class="latest-game-card">
             <figure
               class="card-banner img-holder"
               style="--width: 400; --height: 470"
@@ -39,71 +42,11 @@
               </h3>
 
               <p class="card-price">
-                Entry Fee : <span class="span">Free</span>
+                Entry Fee : <span class="span">${{ game.price }}</span>
               </p>
             </div>
           </div>
         </li>
-
-        <!-- <li class="scrollbar-item">
-            <div class="latest-game-card">
-              <figure
-                class="card-banner img-holder"
-                style="--width: 400; --height: 470"
-              >
-                <img
-                  src="./assets/images/latest-game-2.jpg"
-                  width="400"
-                  height="470"
-                  loading="lazy"
-                  alt="Hunter Killer II"
-                  class="img-cover"
-                />
-              </figure>
-
-              <div class="card-content">
-                <a href="#" class="card-badge skewBg">Adventure</a>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Hunter Killer II</a>
-                </h3>
-
-                <p class="card-price">
-                  Entry Fee : <span class="span">$25.00</span>
-                </p>
-              </div>
-            </div>
-          </li>
-
-          <li class="scrollbar-item">
-            <div class="latest-game-card">
-              <figure
-                class="card-banner img-holder"
-                style="--width: 400; --height: 470"
-              >
-                <img
-                  src="./assets/images/latest-game-3.jpg"
-                  width="400"
-                  height="470"
-                  loading="lazy"
-                  alt="Cyberpunk Daily"
-                  class="img-cover"
-                />
-              </figure>
-
-              <div class="card-content">
-                <a href="#" class="card-badge skewBg">Action</a>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Cyberpunk 2077</a>
-                </h3>
-
-                <p class="card-price">
-                  Entry Fee : <span class="span">$65.00</span>
-                </p>
-              </div>
-            </div>
-          </li> -->
       </ul>
     </div>
   </section>

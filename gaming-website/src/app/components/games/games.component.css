@@ -75,5 +75,26 @@
   display: none; /* Hide scrollbar */
 }
 
+.loader {
+  position:fixed;
+  margin-left: 174px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the latest-game section */
+.latest-game-card {
+  animation: fadeInUp 1s ease forwards; /* Apply animation */
+}
+
 
 
