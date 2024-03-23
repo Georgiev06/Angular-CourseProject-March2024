@@ -28,13 +28,13 @@
   padding-top: 10px;
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.4s ease;
+  /* transition: transform 0.4s ease; */
   overflow: hidden;
 }
 
-.latest-game-card:hover {
+/* .latest-game-card:hover {
   transform: translateY(-5px);
-}
+} */
 
 .latest-game-card .card-content {
   position: absolute;
@@ -80,6 +80,15 @@
   margin-left: 174px;
 }
 
+/* Animation for .latest-game-card */
+.latest-game-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Apply smooth transition */
+  animation: fadeInUp 1s ease forwards; /* Apply fadeInUp animation */
+}
+
+/* Keyframes for the fadeInUp animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -91,10 +100,17 @@
   }
 }
 
-/* Apply the animation to the latest-game section */
-.latest-game-card {
-  animation: fadeInUp 1s ease forwards; /* Apply animation */
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
