@@ -1,2 +1,106 @@
+<section
+  class="newsletter"
+  aria-label="newsletter"
+  style="height: 100rem; width: auto"
+>
+  <div class="container">
+    <div class="newsletter-card">
+      <h2 class="h2 section-title">Add Game</h2>
+      <form action="" class="newsletter-form">
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="title"
+            aria-label="title"
+            placeholder="Enter the title..."
+            required
+            class="email-field"
+            #inputGameTitle
+          />
 
-  
+          <!-- <ion-icon name="mail-outline"></ion-icon> -->
+        </div>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="genre"
+            aria-label="genre"
+            placeholder="Enter the genre..."
+            required
+            class="password-field"
+            #inputGameGenre
+          />
+
+          <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
+        </div>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="devloper"
+            aria-label="devloper"
+            placeholder="Enter the devloper..."
+            required
+            class="password-field"
+            #inputGameDeveloper
+          />
+
+          <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
+        </div>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="number"
+            name="releaseYear"
+            aria-label="releaseYear"
+            placeholder="Enter the release year..."
+            required
+            class="password-field"
+            #inputGameReleaseYear
+          />
+
+          <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
+        </div>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="number"
+            name="price"
+            aria-label="price"
+            placeholder="Enter the price..."
+            required
+            class="password-field"
+            #inputGamePrice
+          />
+
+          <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
+        </div>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="imageUrl"
+            aria-label="imageUrl"
+            placeholder="Enter the image url..."
+            required
+            class="password-field"
+            #inputGameImageUrl
+          />
+
+          <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
+        </div>
+
+        <button
+          type="submit"
+          class="btn newsletter-btn skewBg"
+          (click)="addGame($event, inputGameTitle.value, inputGameGenre.value, inputGameDeveloper.value, inputGameReleaseYear.value, inputGameImageUrl.value, inputGamePrice.value)"
+        >
+          <span class="span">Add Game</span>
+
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -20,8 +20,27 @@ export class ApiService {
 
   getAllGames(): Observable<Game[]> {
     const url = 'http://localhost:3000/api/games';
-    return this.httpClient.get<{data: { games: Game[] }}>(url).pipe(
-      map(response => response.data.games) 
-    );
+    return this.httpClient
+      .get<{ data: { games: Game[] } }>(url)
+      .pipe(map((response) => response.data.games));
+  }
+
+  createGame(
+    gameTitle: string,
+    gameGenre: string,
+    gameDeveloper: string,
+    gameReleaseYear: number,
+    gameImageUrl: string,
+    gamePrice: number
+  ) {
+    const url = 'http://localhost:3000/api/games';
+    return this.httpClient.post<Game>(url, {
+      gameTitle,
+      gameGenre,
+      gameDeveloper,
+      gameReleaseYear,
+      gameImageUrl,
+      gamePrice,
+    });
   }
 }

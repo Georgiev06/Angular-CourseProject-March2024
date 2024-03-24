@@ -5,5 +5,5 @@ export interface Game {
   developer: string;
   release_year: number;
   imageUrl: string;
-  price: number
+  price: number;
 }
