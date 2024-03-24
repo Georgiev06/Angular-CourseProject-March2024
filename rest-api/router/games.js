@@ -10,7 +10,7 @@ router
   .post(auth(), gameController.createGame);
 
 router
-  .route("/games/:gameId")
+  .route("/:gameId")
   .get(gameController.getGame)
   .put(auth(), gameController.updateGame)
   .delete(auth(), gameController.deleteGame);

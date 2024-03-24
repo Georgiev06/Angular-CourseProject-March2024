@@ -43,4 +43,9 @@ export class ApiService {
       gamePrice,
     });
   }
+
+  getGame(id: string) {
+    const url = 'http://localhost:3000/api/games';
+    return this.httpClient.get<Game>(`${url}/${id}`)
+  }
 }

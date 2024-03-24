@@ -86,6 +86,7 @@
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease; /* Apply smooth transition */
   animation: fadeInUp 1s ease forwards; /* Apply fadeInUp animation */
+  cursor: pointer;
 }
 
 /* Keyframes for the fadeInUp animation */

@@ -14,6 +14,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './components/loader/loader.component';
 import { AddGameComponent } from './components/add-game/add-game.component';
+import { GameDetailsComponent } from './components/game-details/game-details.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AddGameComponent } from './components/add-game/add-game.component';
     LoginComponent,
     RegisterComponent,
     LoaderComponent,
-    AddGameComponent
+    AddGameComponent,
+    GameDetailsComponent,
+    ErrorComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, IonicModule.forRoot({})],
   providers: [],

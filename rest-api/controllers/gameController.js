@@ -39,7 +39,7 @@ exports.getAllGames = async (req, res) => {
 // Get a single game by ID
 exports.getGame = async (req, res) => {
   try {
-    const game = await Game.findById(req.params.id);
+    const game = await Game.findById(req.params.gameId);
     if (!game) {
       return res.status(404).json({
         status: 'fail',

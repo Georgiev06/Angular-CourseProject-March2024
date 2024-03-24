@@ -19,7 +19,7 @@
         <app-loader/>
       </div>
       <li *ngFor="let game of games" class="scrollbar-item">
-          <div *ngIf="!isLoading" class="latest-game-card">
+          <div *ngIf="!isLoading" class="latest-game-card" [routerLink]="game._id">
             <figure
               class="card-banner img-holder"
               style="--width: 400; --height: 470"
@@ -35,10 +35,10 @@
             </figure>
 
             <div class="card-content">
-              <a href="#" class="card-badge skewBg">{{ game.genre }}</a>
+              <a class="card-badge skewBg">{{ game.genre }}</a>
 
               <h3 class="h3">
-                <a href="#" class="card-title">{{ game.title }}</a>
+                <a class="card-title">{{ game.title }}</a>
               </h3>
 
               <p class="card-price">

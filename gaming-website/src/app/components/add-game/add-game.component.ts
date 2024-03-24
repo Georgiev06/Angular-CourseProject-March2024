@@ -11,7 +11,9 @@ export class AddGameComponent  implements OnInit {
   constructor(private apiService: ApiService) { }
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   addGame(event: Event, gameTitle: string, gameGenre: string, gameDeveloper: string, gameReleaseYear: string, gameImageUrl: string ,gamePrice : string) {
     event.preventDefault();
