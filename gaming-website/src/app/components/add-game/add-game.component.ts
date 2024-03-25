@@ -6,19 +6,36 @@ import { ApiService } from 'src/app/api.service';
   templateUrl: './add-game.component.html',
   styleUrls: ['./add-game.component.css'],
 })
-export class AddGameComponent  implements OnInit {
+export class AddGameComponent implements OnInit {
+  constructor(private apiService: ApiService) {}
 
-  constructor(private apiService: ApiService) { }
+  ngOnInit() {}
 
-
-  ngOnInit() {
-    
-  }
-
-  addGame(event: Event, gameTitle: string, gameGenre: string, gameDeveloper: string, gameReleaseYear: string, gameImageUrl: string ,gamePrice : string) {
+  addGame(
+    event: Event,
+    gameTitle: string,
+    gameGenre: string,
+    gameDeveloper: string,
+    gameReleaseYear: string,
+    gameImageUrl: string,
+    gamePrice: string,
+    gameDescription: string,
+    gameBackgroundImage: string
+  ) {
     event.preventDefault();
-    this.apiService.createGame(gameTitle, gameGenre, gameDeveloper, Number(gameReleaseYear), gameImageUrl, Number(gamePrice)).subscribe(data => {
-      console.log(data);
-    });
+    this.apiService
+      .createGame(
+        gameTitle,
+        gameGenre,
+        gameDeveloper,
+        Number(gameReleaseYear),
+        gameImageUrl,
+        Number(gamePrice),
+        gameDescription,
+        gameBackgroundImage
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
   }
 }

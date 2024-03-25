@@ -90,11 +90,49 @@
 
           <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
         </div>
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="description"
+            aria-label="description"
+            placeholder="Enter the description..."
+            required
+            class="password-field"
+            #inputGameDescription
+          />
+
+          <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
+        </div>
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="backgroundImage"
+            aria-label="backgroundImage"
+            placeholder="Enter the background image url..."
+            required
+            class="password-field"
+            #inputGameBackgroundImage
+          />
+
+          <!-- <ion-icon name="lock-closed-outline"></ion-icon> -->
+        </div>
 
         <button
           type="submit"
           class="btn newsletter-btn skewBg"
-          (click)="addGame($event, inputGameTitle.value, inputGameGenre.value, inputGameDeveloper.value, inputGameReleaseYear.value, inputGameImageUrl.value, inputGamePrice.value)"
+          (click)="
+            addGame(
+              $event,
+              inputGameTitle.value,
+              inputGameGenre.value,
+              inputGameDeveloper.value,
+              inputGameReleaseYear.value,
+              inputGameImageUrl.value,
+              inputGamePrice.value,
+              inputGameDescription.value,
+              inputGameBackgroundImage.value
+            )
+          "
         >
           <span class="span">Add Game</span>
 

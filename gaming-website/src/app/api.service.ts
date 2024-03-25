@@ -31,7 +31,9 @@ export class ApiService {
     gameDeveloper: string,
     gameReleaseYear: number,
     gameImageUrl: string,
-    gamePrice: number
+    gamePrice: number,
+    gameDescription: string,
+    gameBackgroundImage: string
   ) {
     const url = 'http://localhost:3000/api/games';
     return this.httpClient.post<Game>(url, {
@@ -41,6 +43,8 @@ export class ApiService {
       gameReleaseYear,
       gameImageUrl,
       gamePrice,
+      gameDescription,
+      gameBackgroundImage
     });
   }
 

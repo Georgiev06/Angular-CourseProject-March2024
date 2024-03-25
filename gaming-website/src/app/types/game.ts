@@ -6,4 +6,6 @@ export interface Game {
   release_year: number;
   imageUrl: string;
   price: number;
+  description: string;
+  backgroundImage: string;
 }
