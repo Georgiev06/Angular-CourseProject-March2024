@@ -46,12 +46,7 @@ exports.getGame = async (req, res) => {
         message: 'Game not found'
       });
     }
-    res.status(200).json({
-      status: 'success',
-      data: {
-        game
-      }
-    });
+    res.status(200).json(game);
   } catch (err) {
     res.status(500).json({
       status: 'fail',
