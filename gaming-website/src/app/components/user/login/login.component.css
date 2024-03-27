@@ -5,7 +5,7 @@
 .newsletter {
   padding: 300px;
 
-  background-image: url("../../../assets/images/section-wrapper-bg.png");
+  background-image: url("../../../../assets/images/section-wrapper-bg.png");
 }
 
 .newsletter-card {
@@ -163,3 +163,35 @@
   border-color: var(--marigold);
   box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
 }
+
+.error {
+  /* display:flex; */
+  color: #ff6347; /* Error text color */
+  font-family: var(--ff-oxanium);
+  font-size: 1.4rem;
+  margin-top: -10px; /* Move the error message up by adjusting the margin */
+  opacity: 0;
+  transform: translateY(-30px); /* Adjust the vertical position */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.error.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error.active {
+  animation: fadeInDown 0.3s ease forwards;
+}
+

@@ -1,20 +1,31 @@
-<section class="newsletter" aria-label="newsletter" style="height: 100rem; width: auto;">
+<section
+  class="newsletter"
+  aria-label="newsletter"
+  style="height: 100rem; width: auto"
+>
   <div class="container">
     <div class="newsletter-card">
       <h2 class="h2 section-title">Login</h2>
-      <form action="" class="newsletter-form">
+      <form class="newsletter-form" #form="ngForm" (ngSubmit)="login(form)">
         <div class="input-wrapper skewBg">
           <input
             type="email"
-            name="email_address"
+            name="email"
             aria-label="email"
             placeholder="Enter your email..."
             required
             class="email-field"
+            ngModel
+            #inputEmail="ngModel"
+            [appEmail]="['hello', 'directive']"
           />
-
           <ion-icon name="mail-outline"></ion-icon>
         </div>
+        <ng-container *ngIf="inputEmail.touched && !inputEmail.value">
+          <p class="error" [class.active]="inputEmail.errors?.['required']">
+            Email is required
+          </p>
+        </ng-container>
 
         <div class="input-wrapper skewBg">
           <input
@@ -24,6 +35,8 @@
             placeholder="Enter your password..."
             required
             class="password-field"
+            ngModel
+            #inputPassword="ngModel"
           />
 
           <ion-icon name="lock-closed-outline"></ion-icon>
@@ -44,7 +57,8 @@
 
         <p>
           <a class="field"
-            ><ion-icon name="alert-outline"></ion-icon> If you don't have profile click
+            ><ion-icon name="alert-outline"></ion-icon> If you don't have
+            profile click
             <span routerLink="/register" class="link">here</span></a
           >
         </p>
