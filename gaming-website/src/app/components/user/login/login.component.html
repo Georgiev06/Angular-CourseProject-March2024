@@ -42,23 +42,20 @@
             class="password-field"
             ngModel
             #inputPassword="ngModel"
+            minlength="5"
           />
-
           <ion-icon name="lock-closed-outline"></ion-icon>
         </div>
-
-        <!-- <div class="input-wrapper skewBg">
-          <input
-            type="password"
-            name="password"
-            aria-label="password"
-            placeholder="Enter your password again..."
-            required
-            class="password-field"
-          />
-
-          <ion-icon name="lock-closed-outline"></ion-icon>
-        </div> -->
+        <ng-container *ngIf="inputPassword.touched && !inputPassword.value">
+          <p class="error" [class.active]="inputPassword.errors?.['required']">
+            Password is required!
+          </p>
+        </ng-container> 
+        <ng-container *ngIf="inputPassword.errors?.['minlength']">
+          <p class="error" [class.active]="inputPassword.errors?.['minlength']">
+            Password must be at least 5 characters!
+          </p>
+        </ng-container>
 
         <p>
           <a class="field"
