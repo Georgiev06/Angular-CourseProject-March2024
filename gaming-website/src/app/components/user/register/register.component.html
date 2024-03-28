@@ -1,58 +1,80 @@
-<article style="height: 100rem; width: auto;">
+<article style="height: 100rem; width: auto">
   <section class="newsletter" aria-label="newsletter">
     <div class="container">
       <div class="newsletter-card">
         <h2 class="h2 section-title">Register</h2>
-        <form action="" class="newsletter-form">
+        <form
+          class="newsletter-form"
+          [formGroup]="form"
+          (ngSubmit)="register()"
+        >
           <div class="input-wrapper skewBg">
             <input
-            type="email"
-            name="email_address"
-            aria-label="email"
-            placeholder="Enter your email..."
-            required
-            class="email-field"
+              type="email"
+              name="email"
+              aria-label="email"
+              placeholder="Enter your email..."
+              required
+              class="email-field"
+              formControlName="email"
             />
-            
+
             <ion-icon name="mail-outline"></ion-icon>
           </div>
-          
-          <div class="input-wrapper skewBg">
-            <input
-            type="password"
-            name="password"
-            aria-label="password"
-            placeholder="Enter your password..."
-            required
-            class="password-field"
-            />
-            
-            <ion-icon name="lock-closed-outline"></ion-icon>
-          </div>
-          
-          <div class="input-wrapper skewBg">
-            <input
-            type="password"
-            name="password"
-            aria-label="password"
-            placeholder="Enter your password again..."
-            required
-            class="password-field"
-            />
-            
-            <ion-icon name="lock-closed-outline"></ion-icon>
-          </div>
-          
+
+          <ng-container *ngIf="form.get('email')?.touched && !form.get('email')?.value">
+            <p class="error" [class.active]="form.get('email')?.errors?.['required']">
+              Email is required!
+            </p>
+          </ng-container>
+
+          <ng-container *ngIf="form.get('email')?.errors?.['emailValidator']">
+            <p class="error" [class.active]="form.get('email')?.errors?.['emailValidator']">
+              Email is not valid!
+            </p>
+          </ng-container>
+  
+
+          <ng-container formGroupName="passGroup">
+            <div class="input-wrapper skewBg">
+              <input
+                type="password"
+                name="password"
+                aria-label="password"
+                placeholder="Enter your password..."
+                required
+                class="password-field"
+                formControlName="password"
+              />
+
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </div>
+
+            <div class="input-wrapper skewBg">
+              <input
+                type="password"
+                name="rePassword"
+                aria-label="password"
+                placeholder="Enter your password again..."
+                required
+                class="password-field"
+                formControlName="rePassword"
+              />
+
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </div>
+          </ng-container>
           <p>
             <a class="field"
-            ><ion-icon name="alert-outline"></ion-icon> If you already have profile click
-            <span routerLink="/login" class="link">here</span></a
+              ><ion-icon name="alert-outline"></ion-icon> If you already have
+              profile click
+              <span routerLink="/login" class="link">here</span></a
             >
           </p>
-          
+
           <button type="submit" class="btn newsletter-btn skewBg">
             <span class="span">Register</span>
-            
+
             <ion-icon name="log-in-outline"></ion-icon>
           </button>
         </form>
@@ -60,4 +82,3 @@
     </div>
   </section>
 </article>
-  

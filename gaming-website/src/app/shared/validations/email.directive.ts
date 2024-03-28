@@ -4,7 +4,6 @@ import {
   NG_VALIDATORS,
   ValidationErrors,
   Validator,
-  ValidatorFn,
 } from '@angular/forms';
 
 import { emailValidator } from '../utils/email-validator';
