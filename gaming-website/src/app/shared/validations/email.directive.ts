@@ -19,25 +19,14 @@ import { emailValidator } from '../utils/email-validator';
     },
   ],
 })
-export class EmailDirective implements Validator, OnChanges {
+
+export class EmailDirective implements Validator {
   @Input() appEmail: string[] = [];
 
   constructor() {}
 
-  validator: ValidatorFn = () => null;
-
   validate(control: AbstractControl<any, any>): ValidationErrors | null {
-    console.log('control', control);
-
-    return null;
+    const validatorFn = emailValidator(this.appEmail);
+    return validatorFn(control);
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    const { currentValue } = changes['appEmail'];
-
-    if (currentValue?.length) {
-      this.validator = emailValidator(currentValue);
-    }
-  }
-  
 }

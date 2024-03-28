@@ -1,9 +1,10 @@
-import { ValidatorFn } from "@angular/forms";
+import { ValidatorFn } from '@angular/forms';
 
 export function emailValidator(domains: string[]): ValidatorFn {
-    //^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$
-    return (control) => {
-      console.log('control value: ', control.value);
-      return null;
-    };
-  }
+  const domainString = domains.join('|');
+  const regExp = new RegExp(`[A-Za-z0-9]+@gmail\.(${domainString})`);
+  return (control) => {
+    const isEmailInvalid = control.value === '' || regExp.test(control.value);
+    return isEmailInvalid ? null : { emailValidator: true };
+  };
+}

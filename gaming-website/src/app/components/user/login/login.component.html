@@ -17,13 +17,18 @@
             class="email-field"
             ngModel
             #inputEmail="ngModel"
-            [appEmail]="['hello', 'directive']"
+            [appEmail]="['bg', 'com']"
           />
           <ion-icon name="mail-outline"></ion-icon>
         </div>
         <ng-container *ngIf="inputEmail.touched && !inputEmail.value">
           <p class="error" [class.active]="inputEmail.errors?.['required']">
-            Email is required
+            Email is required!
+          </p>
+        </ng-container>
+        <ng-container *ngIf="inputEmail.errors?.['emailValidator']">
+          <p class="error" [class.active]="inputEmail.errors?.['emailValidator']">
+            Email is not valid!
           </p>
         </ng-container>
 
