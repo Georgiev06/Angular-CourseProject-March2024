@@ -6,7 +6,7 @@
   <div class="container">
     <div class="newsletter-card">
       <h2 class="h2 section-title">Add Game</h2>
-      <form action="" class="newsletter-form">
+      <form class="newsletter-form" #form="ngForm" (ngSubmit)="addGame(form)">
         <div class="input-wrapper skewBg">
           <input
             type="text"
@@ -122,15 +122,7 @@
           class="btn newsletter-btn skewBg"
           (click)="
             addGame(
-              $event,
-              inputGameTitle.value,
-              inputGameGenre.value,
-              inputGameDeveloper.value,
-              inputGameReleaseYear.value,
-              inputGameImageUrl.value,
-              inputGamePrice.value,
-              inputGameDescription.value,
-              inputGameBackgroundImage.value
+              form
             )
           "
         >

@@ -294,6 +294,6 @@
 }
 
 /* Apply the animation to the icon */
-.mini-logo ion-icon {
+.mini-logo:hover ion-icon {
   animation: vibration 0.5s ease infinite; /* Use the vibration animation, make it last 0.5 seconds, ease timing, and repeat infinitely */
 }

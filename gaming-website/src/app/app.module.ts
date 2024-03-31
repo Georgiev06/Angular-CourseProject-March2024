@@ -14,6 +14,7 @@ import { GameDetailsComponent } from './components/game-details/game-details.com
 import { ErrorComponent } from './components/error/error.component';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './components/user/user.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { UserModule } from './components/user/user.module';
     GameDetailsComponent,
     ErrorComponent
   ],
-  imports: [BrowserModule, SharedModule, HttpClientModule, UserModule, AppRoutingModule],
+  imports: [BrowserModule, SharedModule, HttpClientModule, UserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -17,7 +17,6 @@ export class GamesComponent implements OnInit {
   ngOnInit() {
     this.api.getAllGames().subscribe(
       (games: Game[]) => {
-        console.log('Received games:', games);
         this.games = games;
 
         setTimeout(() => {
