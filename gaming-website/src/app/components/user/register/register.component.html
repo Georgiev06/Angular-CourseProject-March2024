@@ -22,18 +22,25 @@
             <ion-icon name="mail-outline"></ion-icon>
           </div>
 
-          <ng-container *ngIf="form.get('email')?.touched && !form.get('email')?.value">
-            <p class="error" [class.active]="form.get('email')?.errors?.['required']">
+          <ng-container
+            *ngIf="form.get('email')?.touched && !form.get('email')?.value"
+          >
+            <p
+              class="error"
+              [class.active]="form.get('email')?.errors?.['required']"
+            >
               Email is required!
             </p>
           </ng-container>
 
           <ng-container *ngIf="form.get('email')?.errors?.['emailValidator']">
-            <p class="error" [class.active]="form.get('email')?.errors?.['emailValidator']">
+            <p
+              class="error"
+              [class.active]="form.get('email')?.errors?.['emailValidator']"
+            >
               Email is not valid!
             </p>
           </ng-container>
-  
 
           <ng-container formGroupName="passGroup">
             <div class="input-wrapper skewBg">
@@ -50,6 +57,20 @@
               <ion-icon name="lock-closed-outline"></ion-icon>
             </div>
 
+            <ng-container
+              *ngIf="
+                form.get('passGroup')?.get('password')?.touched &&
+                !form.get('passGroup')?.get('password')?.value
+              "
+            >
+              <p
+                class="error"
+                [class.active]="form.get('passGroup')?.get('password')?.errors?.['required']"
+              >
+                Password is required!
+              </p>
+            </ng-container>
+
             <div class="input-wrapper skewBg">
               <input
                 type="password"
@@ -64,6 +85,18 @@
               <ion-icon name="lock-closed-outline"></ion-icon>
             </div>
           </ng-container>
+
+          <ng-container
+            *ngIf="form.get('passGroup')?.get('rePassword')?.touched"
+          >
+            <p
+              class="error"
+              [class.active]="form.get('passGroup')?.errors?.['passwordValidator'] || form.get('passGroup')?.get('rePassword')?.errors?.['required']"
+            >
+              Repeat password does not match password!
+            </p>
+          </ng-container>
+
           <p>
             <a class="field"
               ><ion-icon name="alert-outline"></ion-icon> If you already have
@@ -72,7 +105,7 @@
             >
           </p>
 
-          <button type="submit" class="btn newsletter-btn skewBg">
+          <button [disabled]="form.invalid" type="submit" class="btn newsletter-btn skewBg">
             <span class="span">Register</span>
 
             <ion-icon name="log-in-outline"></ion-icon>

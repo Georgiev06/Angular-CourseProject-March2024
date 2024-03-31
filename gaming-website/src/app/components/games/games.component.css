@@ -57,7 +57,8 @@
   transition: var(--transition);
 }
 
-.latest-game-card .card-title:hover, .latest-game-card .card-title:focus {
+.latest-game-card .card-title:hover,
+.latest-game-card .card-title:focus {
   color: var(--marigold);
 }
 
@@ -75,8 +76,23 @@
   display: none; /* Hide scrollbar */
 }
 
+.add {
+  position: fixed;
+  transform: translateY(55vh) translateX(20vh);
+  font-size: 5vh;
+  /* color:aliceblue; */
+  color: var(--silver);
+  transition: var(--transition);
+  transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth transform and color change */
+}
+
+.add:hover {
+  color: var(--marigold);
+  transform: translateY(calc(55vh - 5px)) translateX(20vh); /* Move the element up slightly on hover */
+}
+
 .loader {
-  position:fixed;
+  position: fixed;
   margin-left: 174px;
 }
 
@@ -100,18 +116,3 @@
     transform: translateY(0);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

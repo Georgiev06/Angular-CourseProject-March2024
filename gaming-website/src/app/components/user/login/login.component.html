@@ -65,7 +65,7 @@
           >
         </p>
 
-        <button type="submit" class="btn newsletter-btn skewBg">
+        <button [disabled]="form.invalid" type="submit" class="btn newsletter-btn skewBg">
           <span class="span">Login</span>
 
           <ion-icon name="log-in-outline"></ion-icon>
