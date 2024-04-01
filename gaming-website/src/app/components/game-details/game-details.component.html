@@ -1,10 +1,37 @@
-<!-- TODO: Improve the desing -->
-<section id="game-details" style="height: 88rem; width: auto; overflow-y:scroll;">
-  <h1>Game Details</h1>
-  <div className="info-section">
-    <div className="game-header">
-      <img className="game-img" src="{{ game.imageUrl }}" alt="{{ game.title }}" />
-      <h1>{{game.title}}</h1>
+<!-- TODO: improve the html + css -->
+<section class="game-details">
+  <div class="container">
+    <h2 class="h2 section-title">Edit Game</h2>
+    <div class="game-details-content">
+      <div class="game-image">
+        <img
+          style="width: 60vh; height: 60vh"
+          src="{{ game.imageUrl }}"
+          alt="Game Image"
+        />
+      </div>
+      <div class="game-info">
+        <ng-container>
+          <h2 class="game-title">{{ game.title }}</h2>
+          <div class="game-meta">
+            <p><strong>Genre:</strong> {{ game.genre }}</p>
+            <p><strong>Developer:</strong> {{ game.developer }}</p>
+            <p><strong>Release Year:</strong> {{ game.releaseYear }}</p>
+            <p><strong>Price:</strong> ${{ game.price }}</p>
+          </div>
+          <p class="game-description">
+            {{ game.description }}
+          </p>
+          <div class="game-actions">
+            <button class="edit-button">
+              <ion-icon name="create-outline"></ion-icon>
+            </button>
+            <button class="delete-button">
+              <ion-icon name="trash-outline"></ion-icon>
+            </button>
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
 </section>
