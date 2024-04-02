@@ -15,6 +15,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './components/user/user.module';
 import { FormsModule } from '@angular/forms';
+import { AppInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { FormsModule } from '@angular/forms';
     ErrorComponent
   ],
   imports: [BrowserModule, SharedModule, HttpClientModule, UserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [AppInterceptorProvider],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

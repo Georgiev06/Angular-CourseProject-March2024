@@ -3,7 +3,7 @@
 }
 
 .newsletter {
-  padding: 300px;
+  padding: 250px;
 
   background-image: url("../../../../assets/images/section-wrapper-bg.png");
 }
@@ -194,3 +194,4 @@
 .error.active {
   animation: fadeInDown 0.3s ease forwards;
 }
+

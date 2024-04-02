@@ -10,6 +10,43 @@
         >
           <div class="input-wrapper skewBg">
             <input
+              type="username"
+              name="username"
+              aria-label="username"
+              placeholder="Enter your username..."
+              required
+              class="email-field"
+              formControlName="username"
+            />
+            <ion-icon name="person-outline"></ion-icon>
+          </div>
+
+          <ng-container
+            *ngIf="
+              form.get('username')?.touched && !form.get('username')?.value
+            "
+          >
+            <p
+              class="error"
+              [class.active]="form.get('username')?.errors?.['required']"
+            >
+              Username is required!
+            </p>
+          </ng-container>
+
+          <ng-container
+            *ngIf="form.get('username')?.errors?.['minlength']"
+          >
+            <p
+              class="error"
+              [class.active]="form.get('username')?.errors?.['minlength']"
+            >
+              Username must be at least 5 characters!
+            </p>
+          </ng-container>
+
+          <div class="input-wrapper skewBg">
+            <input
               type="email"
               name="email"
               aria-label="email"
@@ -42,6 +79,30 @@
             </p>
           </ng-container>
 
+          <div class="input-wrapper skewBg">
+            <input
+              type="tel"
+              name="tel"
+              aria-label="tel"
+              placeholder="Enter your phone number..."
+              required
+              class="email-field"
+              formControlName="tel"
+            />
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+
+          <ng-container
+            *ngIf="form.get('tel')?.touched && !form.get('tel')?.value"
+          >
+            <p
+              class="error"
+              [class.active]="form.get('tel')?.errors?.['required']"
+            >
+              Phone number is required!
+            </p>
+          </ng-container>
+
           <ng-container formGroupName="passGroup">
             <div class="input-wrapper skewBg">
               <input
@@ -51,6 +112,7 @@
                 placeholder="Enter your password..."
                 required
                 class="password-field"
+                minlength="5"
                 formControlName="password"
               />
 
@@ -71,6 +133,18 @@
               </p>
             </ng-container>
 
+            <ng-container
+              *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']
+              "
+            >
+              <p
+                class="error"
+                [class.active]="form.get('passGroup')?.get('password')?.errors?.['minlength']"
+              >
+                Password must be at least 5 characters!
+              </p>
+            </ng-container>
+
             <div class="input-wrapper skewBg">
               <input
                 type="password"
@@ -87,7 +161,7 @@
           </ng-container>
 
           <ng-container
-            *ngIf="form.get('passGroup')?.get('rePassword')?.touched"
+            *ngIf="form.get('passGroup')?.errors?.['passwordValidator'] && form.get('passGroup')?.get('rePassword')?.touched"
           >
             <p
               class="error"
@@ -105,7 +179,11 @@
             >
           </p>
 
-          <button [disabled]="form.invalid" type="submit" class="btn newsletter-btn skewBg">
+          <button
+            [disabled]="form.invalid"
+            type="submit"
+            class="btn newsletter-btn skewBg"
+          >
             <span class="span">Register</span>
 
             <ion-icon name="log-in-outline"></ion-icon>

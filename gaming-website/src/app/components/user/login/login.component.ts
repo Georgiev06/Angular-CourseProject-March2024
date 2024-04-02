@@ -15,14 +15,13 @@ export class LoginComponent  implements OnInit {
   ngOnInit() {}
 
   login(form: NgForm) {
-    console.log(form.value);
     if (form.invalid) {
       return;
     }
+    const {email, password} = form.value;
     // event.preventDefault();
-    // this.userService.login();
-    // this.router.navigate(['home']);
-    console.log('clicked');
+    this.userService.login(email, password).subscribe(()=> {
+      this.router.navigate(['home']);
+    })
   }
-
 }

@@ -240,6 +240,16 @@
   text-transform: uppercase;
   font-weight: var(--fw-700);
   padding: 10px 20px;
+  cursor: pointer;
+}
+
+.navbar-username{
+  color: var(--white);
+  font-family: var(--ff-oxanium);
+  font-size: var(--fs-9);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  padding: 10px 20px;
 }
 
 .navbar-link::before {

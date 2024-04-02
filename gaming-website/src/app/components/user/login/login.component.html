@@ -42,7 +42,6 @@
             class="password-field"
             ngModel
             #inputPassword="ngModel"
-            minlength="5"
           />
           <ion-icon name="lock-closed-outline"></ion-icon>
         </div>
@@ -51,6 +50,7 @@
             Password is required!
           </p>
         </ng-container> 
+        
         <ng-container *ngIf="inputPassword.errors?.['minlength']">
           <p class="error" [class.active]="inputPassword.errors?.['minlength']">
             Password must be at least 5 characters!
