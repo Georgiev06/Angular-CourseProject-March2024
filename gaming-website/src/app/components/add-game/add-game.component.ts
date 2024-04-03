@@ -44,6 +44,5 @@ export class AddGameComponent implements OnInit {
     if (form.invalid) {
       return;
     }
-    console.log(form.value);
   }
 }

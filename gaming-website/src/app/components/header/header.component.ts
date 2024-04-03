@@ -13,12 +13,6 @@ export class HeaderComponent {
 
   get isLoggedIn(): boolean {
     return this.userService.isLogged;
-    // if (this.userService.isLogged == true) {
-    //   return true;
-    // }
-
-    // this.router.navigate(['register'])
-    // return false
   }
 
   get username(): string {

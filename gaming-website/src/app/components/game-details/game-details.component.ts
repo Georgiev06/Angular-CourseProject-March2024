@@ -12,13 +12,13 @@ export class GameDetailsComponent  implements OnInit {
   game = {} as Game;
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.activatedRoute.params.subscribe(data => {
       const gameId = data['gameId'];
       this.apiService.getGame(gameId).subscribe(game => {
         this.game = game;
-        console.log(game);
       });
     })
   }
 }
+

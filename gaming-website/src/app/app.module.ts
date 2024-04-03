@@ -11,11 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './components/loader/loader.component';
 import { AddGameComponent } from './components/add-game/add-game.component';
 import { GameDetailsComponent } from './components/game-details/game-details.component';
-import { ErrorComponent } from './components/error/error.component';
+import { NotFoundErrorComponent } from './components/not-found-error/not-found-error.component';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './components/user/user.module';
 import { FormsModule } from '@angular/forms';
 import { AppInterceptorProvider } from './app.interceptor';
+import { AuthenticateComponent } from './components/authenticate/authenticate.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AppInterceptorProvider } from './app.interceptor';
     LoaderComponent,
     AddGameComponent,
     GameDetailsComponent,
-    ErrorComponent
+    NotFoundErrorComponent,
+    ErrorComponent,
+    AuthenticateComponent
   ],
   imports: [BrowserModule, SharedModule, HttpClientModule, UserModule, AppRoutingModule, FormsModule],
   providers: [AppInterceptorProvider],

@@ -9,8 +9,6 @@ export function passwordValidator(
     const rePass = control.get(rePassword);
     const isMatching = pass?.value == rePass?.value;
 
-    console.log(isMatching);
-
     return isMatching ? null : { passwordValidator: true };
   };
 }
