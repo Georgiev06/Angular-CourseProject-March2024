@@ -26,30 +26,34 @@ export class ApiService {
   }
 
   createGame(
-    gameTitle: string,
-    gameGenre: string,
-    gameDeveloper: string,
-    gameReleaseYear: number,
-    gameImageUrl: string,
-    gamePrice: number,
-    gameDescription: string,
-    gameBackgroundImage: string
+    title: string,
+    genre: string,
+    developer: string,
+    releaseYear: number,
+    imageUrl: string,
+    price: number,
+    description: string,
+    backgroundImage: string
   ) {
-    const url = 'http://localhost:3000/api/games';
+    const url = '/api/games';
     return this.httpClient.post<Game>(url, {
-      gameTitle,
-      gameGenre,
-      gameDeveloper,
-      gameReleaseYear,
-      gameImageUrl,
-      gamePrice,
-      gameDescription,
-      gameBackgroundImage
+      title,
+      genre,
+      developer,
+      releaseYear,
+      imageUrl,
+      price,
+      description,
+      backgroundImage
     });
   }
 
   getGame(id: string) {
     const url = 'http://localhost:3000/api/games';
     return this.httpClient.get<Game>(`${url}/${id}`)
+  }
+
+  deleteGame(gameId: string) {
+    return this.httpClient.delete<Game>(`/api/games/${gameId}`);
   }
 }

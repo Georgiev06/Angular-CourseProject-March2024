@@ -3,7 +3,7 @@ export interface Game {
   title: string;
   genre: string;
   developer: string;
-  releaseYear: number;
+  releaseYear: Date;
   imageUrl: string;
   price: number;
   description: string;

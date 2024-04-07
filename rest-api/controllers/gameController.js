@@ -3,6 +3,7 @@ const Game = require('../models/gameModel');
 // Create a new game
 exports.createGame = async (req, res) => {
   try {
+    console.log(req.body)
     const newGame = await Game.create(req.body);
     res.status(201).json({
       status: 'success',
@@ -15,6 +16,7 @@ exports.createGame = async (req, res) => {
       status: 'fail',
       message: err.message
     });
+    console.log(err.message)
   }
 };
 
@@ -84,8 +86,12 @@ exports.updateGame = async (req, res) => {
 
 // Delete a game by ID
 exports.deleteGame = async (req, res) => {
+  console.log(req.params);
+  console.log(req.params.gameId);
+
   try {
-    const game = await Game.findByIdAndDelete(req.params.id);
+    const game = await Game.findByIdAndDelete(req.params.gameId);
+    console.log(game)
     if (!game) {
       return res.status(404).json({
         status: 'fail',
@@ -101,5 +107,6 @@ exports.deleteGame = async (req, res) => {
       status: 'fail',
       message: err.message
     });
+    console.log(err.message);
   }
 };

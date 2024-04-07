@@ -14,7 +14,7 @@ const gameSchema = new mongoose.Schema({
     required: true
   },
   releaseYear: {
-    type: Number,
+    type: Date,
     required: true
   },
   imageUrl: {

@@ -3,7 +3,7 @@
   position: absolute;
   bottom: 85vh;
   width: 100%; /* Span the entire width of the page */
-  padding: 20px;
+  padding: 16px;
   background-color: #f44336; /* Red */
   color: var(--white);
   font-family: var(--ff-oxanium);

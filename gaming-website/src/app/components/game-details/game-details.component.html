@@ -1,5 +1,5 @@
 <section class="game-details" style="position: relative;">
-  <div class="background-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-image: url('{{ game.backgroundImage }}'); background-size: cover; background-repeat: no-repeat; filter: blur(5px) brightness(50%); z-index: -1;"></div>
+  <div class="background-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-image: url('{{ game.backgroundImage }}'); background-size: cover; background-repeat: no-repeat; filter: blur(5px) brightness(40%); z-index: -1;"></div>
   <div class="container">
     <h2 class="h2 section-title">Game Details</h2>
     <div class="game-details-content" style="filter: brightness(120%);">
@@ -16,7 +16,7 @@
           <div class="game-meta">
             <p><strong>Genre:</strong> {{ game.genre }}</p>
             <p><strong>Developer:</strong> {{ game.developer }}</p>
-            <p><strong>Release Year:</strong> {{ game.releaseYear }}</p>
+            <p><strong>Release Year:</strong> {{ game.releaseYear}}</p>
             <p><strong>Price:</strong> ${{ game.price }}</p>
           </div>
           <p class="game-description">
@@ -26,7 +26,7 @@
             <button class="edit-button">
               <ion-icon name="create-outline"></ion-icon>
             </button>
-            <button class="delete-button">
+            <button class="delete-button" (click)="deleteGame()">
               <ion-icon name="trash-outline"></ion-icon>
             </button>
           </div>

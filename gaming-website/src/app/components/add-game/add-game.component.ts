@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -7,42 +8,27 @@ import { ApiService } from 'src/app/api.service';
   templateUrl: './add-game.component.html',
   styleUrls: ['./add-game.component.css'],
 })
-export class AddGameComponent implements OnInit {
-  constructor(private apiService: ApiService) {}
-
-  ngOnInit() {}
-
-  // addGame(
-  //   event: Event,
-  //   gameTitle: string,
-  //   gameGenre: string,
-  //   gameDeveloper: string,
-  //   gameReleaseYear: string,
-  //   gameImageUrl: string,
-  //   gamePrice: string,
-  //   gameDescription: string,
-  //   gameBackgroundImage: string
-  // ) {
-  //   event.preventDefault();
-  //   this.apiService
-  //     .createGame(
-  //       gameTitle,
-  //       gameGenre,
-  //       gameDeveloper,
-  //       Number(gameReleaseYear),
-  //       gameImageUrl,
-  //       Number(gamePrice),
-  //       gameDescription,
-  //       gameBackgroundImage
-  //     )
-  //     .subscribe((data) => {
-  //       console.log(data);
-  //     });
-  // }
+export class AddGameComponent {
+  constructor(private apiService: ApiService, private router: Router) {}
 
   addGame(form: NgForm) {
     if (form.invalid) {
       return;
     }
+
+    const {
+      title,
+      genre,
+      developer,
+      releaseYear,
+      imageUrl,
+      price,
+      description,
+      backgroundImage,
+    } = form.value;
+
+    this.apiService.createGame(title, genre, developer, releaseYear, imageUrl, price, description, backgroundImage).subscribe(() => {
+      this.router.navigate(['games']);
+    })
   }
 }
