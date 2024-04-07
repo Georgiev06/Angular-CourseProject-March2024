@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { AppInterceptorProvider } from './app.interceptor';
 import { AuthenticateComponent } from './components/authenticate/authenticate.component';
 import { ErrorComponent } from './components/error/error.component';
+import { EditGameComponent } from './components/edit-game/edit-game.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ErrorComponent } from './components/error/error.component';
     LoaderComponent,
     AddGameComponent,
     GameDetailsComponent,
+    EditGameComponent,
     NotFoundErrorComponent,
     ErrorComponent,
     AuthenticateComponent

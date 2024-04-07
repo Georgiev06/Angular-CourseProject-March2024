@@ -60,7 +60,7 @@ exports.getGame = async (req, res) => {
 // Update a game by ID
 exports.updateGame = async (req, res) => {
   try {
-    const game = await Game.findByIdAndUpdate(req.params.id, req.body, {
+    const game = await Game.findByIdAndUpdate(req.params.gameId, req.body, {
       new: true,
       runValidators: true
     });

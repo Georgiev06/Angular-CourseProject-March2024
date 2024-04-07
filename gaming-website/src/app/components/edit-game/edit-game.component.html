@@ -1,0 +1,261 @@
+<section
+  class="newsletter"
+  aria-label="newsletter"
+  style="height: 100rem; width: auto"
+>
+  <div class="container">
+    <div class="newsletter-card">
+      <h2 class="h2 section-title">Edit Game</h2>
+      <form class="newsletter-form" #form="ngForm" (ngSubmit)="editGame(form)">
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="title"
+            aria-label="title"
+            placeholder="Enter the title..."
+            required
+            minlength="5"
+            class="email-field"
+            #inputGameTitle="ngModel"
+            ngModel="{{game.title}}"
+          />
+        </div>
+
+        <ng-container *ngIf="inputGameTitle.touched && !inputGameTitle.value">
+          <p class="error" [class.active]="inputGameTitle.errors?.['required']">
+            Title is required!
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="inputGameTitle?.errors?.['minlength']">
+          <p
+            class="error"
+            [class.active]="inputGameTitle?.errors?.['minlength']"
+          >
+            Title must be at least 5 characters long!
+          </p>
+        </ng-container>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="genre"
+            aria-label="genre"
+            placeholder="Enter the genre..."
+            required
+            minlength="4"
+            class="password-field"
+            #inputGameGenre="ngModel"
+            ngModel="{{game.genre}}"
+          />
+        </div>
+
+        <ng-container *ngIf="inputGameGenre.touched && !inputGameGenre.value">
+          <p class="error" [class.active]="inputGameGenre.errors?.['required']">
+            Genre is required!
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="inputGameGenre?.errors?.['minlength']">
+          <p
+            class="error"
+            [class.active]="inputGameGenre?.errors?.['minlength']"
+          >
+            Genre must be at least 4 characters long!
+          </p>
+        </ng-container>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="developer"
+            aria-label="developer"
+            placeholder="Enter the developer..."
+            minlength="6"
+            required
+            class="password-field"
+            #inputGameDeveloper="ngModel"
+            ngModel="{{game.developer}}"
+          />
+        </div>
+
+        <ng-container
+          *ngIf="inputGameDeveloper.touched && !inputGameDeveloper.value"
+        >
+          <p
+            class="error"
+            [class.active]="inputGameDeveloper.errors?.['required']"
+          >
+            Developer is required!
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="inputGameDeveloper?.errors?.['minlength']">
+          <p
+            class="error"
+            [class.active]="inputGameDeveloper?.errors?.['minlength']"
+          >
+            Developer must be at least 6 characters long!
+          </p>
+        </ng-container>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="date"
+            name="releaseYear"
+            aria-label="releaseYear"
+            placeholder="Enter the release year..."
+            minlength="4"
+            required
+            class="password-field"
+            #inputGameReleaseYear="ngModel"
+            [(ngModel)]="formattedReleaseYear"
+          />
+        </div>
+
+        <ng-container
+          *ngIf="inputGameReleaseYear.touched && !inputGameReleaseYear.value"
+        >
+          <p
+            class="error"
+            [class.active]="inputGameReleaseYear.errors?.['required']"
+          >
+            Release year is required!
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="inputGameReleaseYear?.errors?.['minlength']">
+          <p
+            class="error"
+            [class.active]="inputGameReleaseYear?.errors?.['minlength']"
+          >
+            Release year must be at least 4 characters long!
+          </p>
+        </ng-container>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="number"
+            name="price"
+            aria-label="price"
+            placeholder="Enter the price..."
+            minlength="1"
+            required
+            class="password-field"
+            #inputGamePrice="ngModel"
+            ngModel="{{game.price}}"
+          />
+        </div>
+
+        <ng-container *ngIf="inputGamePrice.touched && !inputGamePrice.value">
+          <p class="error" [class.active]="inputGamePrice.errors?.['required']">
+            Price is required!
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="inputGamePrice?.errors?.['minlength']">
+          <p
+            class="error"
+            [class.active]="inputGamePrice?.errors?.['minlength']"
+          >
+            Price must be at least 1 characters long!
+          </p>
+        </ng-container>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="imageUrl"
+            aria-label="imageUrl"
+            placeholder="Enter the image url..."
+            required
+            class="password-field"
+            #inputGameImageUrl="ngModel"
+            ngModel="{{game.imageUrl}}"
+          />
+        </div>
+
+        <ng-container
+          *ngIf="inputGameImageUrl.touched && !inputGameImageUrl.value"
+        >
+          <p
+            class="error"
+            [class.active]="inputGameImageUrl.errors?.['required']"
+          >
+            ImageUrl is required!
+          </p>
+        </ng-container>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="description"
+            aria-label="description"
+            placeholder="Enter the description..."
+            minlength="10"
+            required
+            class="password-field"
+            #inputGameDescription="ngModel"
+            ngModel="{{game.description}}"
+          />
+        </div>
+
+        <ng-container
+          *ngIf="inputGameDescription.touched && !inputGameDescription.value"
+        >
+          <p
+            class="error"
+            [class.active]="inputGameDescription.errors?.['required']"
+          >
+            Description is required!
+          </p>
+        </ng-container>
+
+        <ng-container *ngIf="inputGameDescription?.errors?.['minlength']">
+          <p
+            class="error"
+            [class.active]="inputGameDescription?.errors?.['minlength']"
+          >
+            Description must be at least 10 characters long!
+          </p>
+        </ng-container>
+
+        <div class="input-wrapper skewBg">
+          <input
+            type="text"
+            name="backgroundImage"
+            aria-label="backgroundImage"
+            placeholder="Enter the background image url..."
+            required
+            class="password-field"
+            #inputGameBackgroundImage="ngModel"
+            ngModel="{{game.backgroundImage}}"
+          />
+        </div>
+
+        <ng-container
+          *ngIf="
+            inputGameBackgroundImage.touched && !inputGameBackgroundImage.value
+          "
+        >
+          <p
+            class="error"
+            [class.active]="inputGameBackgroundImage.errors?.['required']"
+          >
+            Background-image is required!
+          </p>
+        </ng-container>
+
+        <button
+          [disabled]="form.invalid"
+          type="submit"
+          class="btn newsletter-btn skewBg"
+        >
+          <span class="span">Edit Game</span>
+
+          <ion-icon name="create-outline"></ion-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

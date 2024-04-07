@@ -16,14 +16,14 @@
           <div class="game-meta">
             <p><strong>Genre:</strong> {{ game.genre }}</p>
             <p><strong>Developer:</strong> {{ game.developer }}</p>
-            <p><strong>Release Year:</strong> {{ game.releaseYear}}</p>
+            <p><strong>Release Year:</strong>{{ game.releaseYear.toString().slice(0, 10) }}</p>
             <p><strong>Price:</strong> ${{ game.price }}</p>
           </div>
           <p class="game-description">
             {{ game.description }}
           </p>
           <div class="game-actions">
-            <button class="edit-button">
+            <button class="edit-button" [routerLink]="['/edit', game._id]">
               <ion-icon name="create-outline"></ion-icon>
             </button>
             <button class="delete-button" (click)="deleteGame()">

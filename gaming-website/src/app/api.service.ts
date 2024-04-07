@@ -44,13 +44,37 @@ export class ApiService {
       imageUrl,
       price,
       description,
-      backgroundImage
+      backgroundImage,
     });
   }
 
   getGame(id: string) {
     const url = 'http://localhost:3000/api/games';
-    return this.httpClient.get<Game>(`${url}/${id}`)
+    return this.httpClient.get<Game>(`${url}/${id}`);
+  }
+
+  updateGame(
+    gameId: string,
+    title: string,
+    genre: string,
+    developer: string,
+    releaseYear: Date,
+    imageUrl: string,
+    price: number,
+    description: string,
+    backgroundImage: string
+  ) {
+    return this.httpClient.put<Game>(`/api/games/${gameId}`, {
+      gameId,
+      title,
+      genre,
+      developer,
+      releaseYear,
+      imageUrl,
+      price,
+      description,
+      backgroundImage,
+    });
   }
 
   deleteGame(gameId: string) {

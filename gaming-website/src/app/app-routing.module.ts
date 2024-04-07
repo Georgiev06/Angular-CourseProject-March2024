@@ -9,6 +9,7 @@ import { GameDetailsComponent } from './components/game-details/game-details.com
 import { NotFoundErrorComponent } from './components/not-found-error/not-found-error.component';
 import { UserRoutingModule } from './components/user/user-routing.module';
 import { ErrorComponent } from './components/error/error.component';
+import { EditGameComponent } from './components/edit-game/edit-game.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   { path: 'games', component: GamesComponent, canActivate: [authGuard] },
   { path: 'add-game', component: AddGameComponent, canActivate: [authGuard] },
+  { path: 'edit/:gameId', component: EditGameComponent, canActivate: [authGuard] },
   {
     path: 'games/:gameId',
     component: GameDetailsComponent,
