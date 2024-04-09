@@ -1,0 +1,50 @@
+.user-profile {
+  margin-top: 20px;
+  padding: 150px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  margin-right: 20px;
+}
+
+.profile-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  font-size: 18px;
+}
+
+.profile-field {
+  margin-bottom: 10px;
+}
+
+.profile-field label {
+  font-weight: bold;
+}
+
+.profile-field span {
+  margin-left: 10px;
+}
+
+
+
+

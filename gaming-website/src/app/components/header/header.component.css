@@ -131,6 +131,13 @@
   font-size: 20px;
 }
 
+.user-profile {
+  display: block;
+  position: relative;
+  color: var(--white);
+  font-size: 20px;
+}
+
 .cart-badge {
   position: absolute;
   top: -6px;
