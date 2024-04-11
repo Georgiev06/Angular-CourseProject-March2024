@@ -1,48 +1,42 @@
 .user-profile {
-  margin-top: 20px;
-  padding: 150px;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.profile-details {
   display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--ff-oxanium);
+  background-image: url(../../../../assets/images/section-wrapper-bg.png);
+}
+
+.profile-card {
+  background-color: var(--rich-black-fogra-29_95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 .profile-avatar {
-  margin-right: 20px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.profile-avatar img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+.profile-username {
+  margin-top: 10px;
+  font-size: var(--fs-4);
+  color: var(--silver);
 }
 
 .profile-info {
-  font-size: 18px;
+  margin-top: 20px;
 }
 
-.profile-field {
-  margin-bottom: 10px;
-}
-
-.profile-field label {
-  font-weight: bold;
-}
-
-.profile-field span {
-  margin-left: 10px;
+.profile-info p {
+  font-size: var(--fs-6);
+  color: var(--dim-gray);
+  margin-bottom: 8px;
 }
 
 

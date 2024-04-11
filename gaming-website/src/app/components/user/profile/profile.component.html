@@ -1,4 +1,4 @@
-<section class="user-profile">
+<!-- <section class="user-profile">
   <div class="container">
     <h2 class="section-title">User Profile</h2>
     <div class="profile-details">
@@ -21,9 +21,46 @@
       </div>
     </div>
   </div>
+</section> -->
+
+
+<!-- <div class="user-profile">
+  <div class="profile-card">
+    <div class="profile-header">
+      <img
+        src="../../../../assets/images/brand-6.png"
+        alt="Profile Image"
+        class="profile-avatar"
+      />
+      <h1 class="profile-username">{{ user.username }}</h1>
+    </div>
+    <div class="profile-info">
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Phone number:</strong> {{ user.tel }}</p>
+      <p>
+        <strong>Joined:</strong> {{ user.created_at.toString().slice(0, 10) }}
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<section class="user-profile">
+  <div class="profile-card">
+    <div class="profile-header">
+      <img
+        src="../../../../assets/images/brand-6.png"
+        alt="Profile Image"
+        class="profile-avatar"
+      />
+      <h1 class="profile-username">{{ user.username }}</h1>
+    </div>
+    <div class="profile-info">
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Phone number:</strong> {{ user.tel }}</p>
+      <p>
+        <strong>Joined:</strong> {{ user.created_at.toString().slice(0, 10) }}
+      </p>
+    </div>
+  </div>
 </section>
-
-
-
-
 

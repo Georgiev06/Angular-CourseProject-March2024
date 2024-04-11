@@ -15,4 +15,5 @@ export interface UserForAuth {
   tel: string;
   password: string;
   id: string;
+  created_at: string;
 }
