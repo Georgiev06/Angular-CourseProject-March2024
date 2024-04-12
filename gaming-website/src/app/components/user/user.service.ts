@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
-import { UserForAuth } from 'src/app/types/user';
+import { User, UserForAuth } from 'src/app/types/user';
 @Injectable({
   providedIn: 'root',
 })
@@ -16,6 +16,10 @@ export class UserService implements OnDestroy {
 
   get isLogged(): boolean {
     return !!this.user;
+  }
+
+  getUserId(): string {
+    return this.user!._id;
   }
 
   constructor(private httpClient: HttpClient) {
@@ -52,10 +56,23 @@ export class UserService implements OnDestroy {
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
+  // getUser() {
+  //   return this.httpClient
+  //     .get<UserForAuth>('/api/users/profile')
+  //     .pipe(tap((user) => this.user$$.next(user)));
+  // }
   getUser() {
-    return this.httpClient
-      .get<UserForAuth>('/api/users/profile')
-      .pipe(tap((user) => this.user$$.next(user)));
+    return this.httpClient.get<UserForAuth>('/api/users/profile').pipe(
+      tap(
+        (user) => {
+          console.log('Retrieved user from API:', user);
+          this.user$$.next(user);
+        },
+        (error) => {
+          console.error('Error retrieving user:', error); 
+        }
+      )
+    );
   }
 
   logout() {

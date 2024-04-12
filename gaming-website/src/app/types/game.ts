@@ -8,4 +8,5 @@ export interface Game {
   price: number;
   description: string;
   backgroundImage: string;
+  userId: string;
 }

@@ -13,7 +13,10 @@ export class AuthenticateComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getUser().subscribe({
-      next: () => {
+      next: (user) => {
+        if (user) {
+          console.log(user._id); // Now you should have the user ID
+        }
         this.isAuthenticating = false;
       },
       error: () => {

@@ -22,7 +22,7 @@
           <p class="game-description">
             {{ game.description }}
           </p>
-          <div class="game-actions">
+          <div class="game-actions" *ngIf="isUserTheCreator()">
             <button class="edit-button" [routerLink]="['/edit', game._id]">
               <ion-icon name="create-outline"></ion-icon>
             </button>

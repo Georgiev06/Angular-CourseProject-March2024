@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { ObjectId } = mongoose.Schema.Types;
 
 const gameSchema = new mongoose.Schema({
   title: {
@@ -32,6 +33,9 @@ const gameSchema = new mongoose.Schema({
   backgroundImage: {
     type: String,
     required: true
+  },
+  userId: {
+    type: ObjectId
   }
 });
 

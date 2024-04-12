@@ -33,7 +33,8 @@ export class ApiService {
     imageUrl: string,
     price: number,
     description: string,
-    backgroundImage: string
+    backgroundImage: string,
+    userId: string,
   ) {
     const url = '/api/games';
     return this.httpClient.post<Game>(url, {
@@ -45,6 +46,7 @@ export class ApiService {
       price,
       description,
       backgroundImage,
+      userId
     });
   }
 

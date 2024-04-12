@@ -23,6 +23,7 @@ export class EditGameComponent implements OnInit {
     price: 1,
     description: '',
     backgroundImage: '',
+    userId: '',
   };
 
   constructor(
