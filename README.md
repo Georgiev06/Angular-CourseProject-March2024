@@ -10,8 +10,9 @@
 - ### [Softuni-Practice-Server](https://github.com/softuni-practice-server/softuni-practice-server)
 
 ## <img src="https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/2692.svg" width="30" height="30"> Used Technologies
-- ### [Angular]()
-- ### [Ionic]()
+- ### [Angular](https://angular.io/)
+- ### [Ionic](https://ionic.io/)
+- ### [HTML & CSS](https://www.geeksforgeeks.org/difference-between-html-and-css/)
 #
 ## <img src="https://cdn.jsdelivr.net/npm/twemoji@11.3.0/2/svg/270d.svg" width="30" height="30"> Author
 ## Miroslav Georgiev
