@@ -21,7 +21,7 @@ export class GamesComponent implements OnInit {
 
         setTimeout(() => {
           this.isLoading = false;
-        }, 3000);
+        }, 2000);
       },
       (error) => {
         console.error('Error fetching games:', error);
